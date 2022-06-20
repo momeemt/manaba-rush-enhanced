@@ -23,11 +23,11 @@ const colorizeDeadline = ({
       const target = dayjs(deadline, "YYYY-MM-DD HH:mm")
       const diffDays = target.diff(now, "day")
 
-      if (diffDays < 1) {
+      if (diffDays < 3) {
         row.classList.add("one-day-before")
-      } else if (diffDays < 3) {
+      } else if (diffDays < 5) {
         row.classList.add("three-days-before")
-      } else if (diffDays < 7) {
+      } else if (diffDays < 9) {
         row.classList.add("seven-days-before")
       }
     }
